@@ -1,1 +1,118 @@
-<h1></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: #1e1e1e;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .toggle-btn {
+            background-color: var(--accent-color);
+            border: none;
+            color: var(--bg-color);
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #6200ee;
+        }
+
+        body.light-mode header {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to My Personal Website</h2>
+            <p>Here you can introduce yourself and your work.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief description about yourself, your skills, and your interests.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>List and describe some of your key projects or achievements.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Provide your contact information or a contact form.</p>
+        </section>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+</body>
+</html>
